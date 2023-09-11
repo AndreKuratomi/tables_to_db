@@ -28,13 +28,13 @@ git init
 <h5>1. Fazer o clone do reposítório <span>Kanvas</span> na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
 
 ```
-git clone git@gitlab.com:ABKURA/kanvas.git
+git clone https://github.com/AndreKuratomi/tables_to_db.git
 ```
 
 <p>Entrar na pasta criada:</p>
 
 ```
-cd kanvas
+cd tables_to_db
 ```
 
 Após feito o clone do repositório Kanvas, instalar:
