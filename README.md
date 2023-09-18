@@ -7,7 +7,7 @@
 
 # Sobre
 
-<b>Tables to db</b> 
+<b>Tables to db</b> é um script que insere tabelas csv em um banco de dados MySQL usando PyMySQL e Pandas.
 <br>
 
 # Instalação
