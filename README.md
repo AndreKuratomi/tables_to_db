@@ -7,7 +7,7 @@
 
 # Sobre
 
-<b>Tables to db</b> é um script que insere tabelas csv em um banco de dados MySQL usando PyMySQL e Pandas.
+<b>Tables to db</b> é um script que automatiza a inserção de tabelas csv em um banco de dados MySQL usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
 <br>
 
 # Instalação
