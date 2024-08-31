@@ -1,4 +1,4 @@
-## TABLES TO DB
+# tables_to_db
 
 - [Sobre](#sobre)
 - [Instalação](#instalação)
@@ -6,7 +6,7 @@
 
 <br>
 
-# Sobre
+## Sobre
 
 <b>Tables to db</b> é um script que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
 
@@ -120,3 +120,10 @@ reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
 code .
 ```
 <br>
+<br>
+
+## Referências
+
+- [Git](https://git-scm.com/downloads)
+- [Pandas](https://pandas.pydata.org/docs/)
+- [Python](https://www.python.org/downloads/)
