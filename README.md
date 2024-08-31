@@ -16,7 +16,7 @@ Este script pode ser acoplado a qualquer projeto maior que necessite desta funci
 
 ## Instalação
 
-<h3>0. Para a utilização deste script, primeiramente é necessário já ter instalado na própria máquina:</h3>
+<h4>0. Para a utilização deste script, primeiramente é necessário já ter instalado na própria máquina:</h4>
 
 - O versionador de código <b>[Git](https://git-scm.com/downloads)</b>.
 
@@ -29,7 +29,7 @@ git init
 ```
 
 <br>
-<h3>1. Fazer o clone do reposítório <b>tables_to_db</b> na sua máquina pelo terminal do computador ou pelo do IDE:</h3>
+<h4>1. Fazer o clone do reposítório <b>tables_to_db</b> na sua máquina pelo terminal do computador ou pelo do IDE:</h4>
 
 ```
 git clone https://github.com/AndreKuratomi/tables_to_db.git
@@ -56,9 +56,9 @@ cd tables_to_db
 ```
 <br>
 
-<h3>2. Após feito o clone do repositório, instalar:</h3>
+<h4>2. Após feito o clone do repositório, instalar:</h4>
 
-<h4>O ambiente virtual e atualizar suas dependências com o seguinte comando:</h4>
+<h5>O ambiente virtual e atualizar suas dependências com o seguinte comando:</h5>
 
 LINUX:
 ```
@@ -83,9 +83,7 @@ You may need to use sudo with that command.  After installing the python3-venv
 package, recreate your virtual environment.
 ```
 
-<h4>Ative o seu ambiente virtual* com o comando:</h4>
-
-*É interessante seguir esta prática porque diferentes projetos exigem diferentes dependências. Um ambiente virtual nada mais é do que um ambiente separado da sua máquina. Caso contrário, a máquina do usuário pode se encher de dependências que serão utilizadas apenas em um único projeto.
+<h5>Ative o seu ambiente virtual* com o comando:</h5>
 
 LINUX:
 ```
@@ -108,7 +106,9 @@ E enfim ativar o ambiente virtual com o comando abaixo:
 .\env\Scripts\activate
 ```
 
-<h4>Instalar suas dependências:</h4>
+*É interessante seguir esta prática porque diferentes projetos exigem diferentes dependências. Um ambiente virtual nada mais é do que um ambiente separado da sua máquina. Caso contrário, a máquina do usuário pode se encher de dependências que serão utilizadas apenas em um único projeto.
+
+<h5>Instalar suas dependências:</h5>
 
 ```
 pip install -r requirements.txt
@@ -130,7 +130,7 @@ reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
 ```
 <br>
 
-<h3>4. Criar o arquivo <b>.env</b> no diretório raiz:</h3>
+<h4>4. Criar o arquivo <b>.env</b> no diretório raiz:</h4>
 
 ./
 ```
@@ -144,18 +144,18 @@ MYSQL_USER=user
 MYSQL_PASSWORD=password
 ```
 
-Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O arquivo já consta no .gitignore para não constar no repositório github.
+Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O arquivo já consta no <b>.gitignore</b> para não constar no repositório github.
 
 <br>
 
 
-<h3>3. Abrir o script no seu IDE:</h3>
+<h4>3. Abrir o script no seu IDE:</h4>
 
 ```
 code .
 ```
 
-<h3>4. E rodar o script:</h3>
+<h4>4. E rodar o script:</h4>
 
 LINUX:
 ```
