@@ -18,7 +18,7 @@ Este script pode ser acoplado a qualquer projeto maior que necessite desta funci
 
 <h3>0. Para a utilização deste script, primeiramente é necessário já ter instalado na própria máquina:</h3>
 
-- O versionador de codigo <b>[Git](https://git-scm.com/downloads)</b>.
+- O versionador de código <b>[Git](https://git-scm.com/downloads)</b>.
 
 - A linguagem de programação <b>[Python](https://www.python.org/downloads/)</b>.
 
@@ -29,7 +29,7 @@ git init
 ```
 
 <br>
-<h5>1. Fazer o clone do reposítório <b>tables_to_db</b> na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
+<h3>1. Fazer o clone do reposítório <b>tables_to_db</b> na sua máquina pelo terminal do computador ou pelo do IDE:</h3>
 
 ```
 git clone https://github.com/AndreKuratomi/tables_to_db.git
@@ -172,5 +172,8 @@ py tables_to_db.py
 ## Referências
 
 - [Git](https://git-scm.com/downloads)
+- [MySQL](https://https://www.mysql.com/)
 - [Pandas](https://pandas.pydata.org/docs/)
 - [Python](https://www.python.org/downloads/)
+- [PyMySQL](https://pypi.org/project/PyMySQL/)
+  
