@@ -76,7 +76,7 @@ python3 -m venv venv --upgrade-deps
 
 WINDOWS:
 ```
-py -m venv env --upgrade-deps
+py -m venv venv --upgrade-deps
 ```
 
 Caso seja retornado algum erro semelhante a este basta seguir as instruções:
