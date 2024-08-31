@@ -2,33 +2,51 @@
 
 - [Sobre](#sobre)
 - [Instalação](#instalação)
+- [Referências](#referências)
 
 <br>
 
 # Sobre
 
-<b>Tables to db</b> é um script que automatiza a inserção de tabelas csv em um banco de dados MySQL usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
+<b>Tables to db</b> é um script que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
+
+Este script pode ser acoplado a qualquer projeto maior que necessite desta funcionalidade.
+
 <br>
 
-# Instalação
+## Instalação
 
-<h5>0. Primeiramente, é necessário já ter instalado na própria máquina:</h5>
+<h3>0. Para a utilização deste script, primeiramente é necessário já ter instalado na própria máquina:</h3>
 
-- Um <b>editor de código</b>, conhecido também como <b>IDE</b>. Por exemplo, o <b>[Visual Studio Code (VSCode)](https://code.visualstudio.com/)</b>.
+- O versionador de codigo <b>[Git](https://git-scm.com/downloads)</b>.
 
-- Uma <b>ferramenta cliente de API REST</b>. Por exemplo, o <b>[Insomnia](https://insomnia.rest/download)</b> ou o <b>[Postman](https://www.postman.com/product/rest-client/)</b>.
+- A linguagem de programação <b>[Python](https://www.python.org/downloads/)</b>.
 
-- <p> E versionar o diretório para receber o clone da aplicação:</p>
+- <p> E versionar o diretório escolhido para receber o clone deste script:</p>
 
 ```
 git init
 ```
 
 <br>
-<h5>1. Fazer o clone do reposítório <span>Kanvas</span> na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
+<h5>1. Fazer o clone do reposítório <b>tables_to_db</b> na sua máquina pelo terminal do computador ou pelo do IDE:</h5>
 
 ```
 git clone https://github.com/AndreKuratomi/tables_to_db.git
+```
+
+WINDOWS:
+
+Obs: Caso apareca algum erro semelhante a este: 
+
+```
+unable to access 'https://github.com/AndreKuratomi/tables_to_db.git': SSL certificate problem: self-signed certificate in certificate chain
+```
+
+Configure o git para desabilitar a certificação SSL:
+
+```
+git config --global http.sslVerify "false"
 ```
 
 <p>Entrar na pasta criada:</p>
@@ -36,29 +54,69 @@ git clone https://github.com/AndreKuratomi/tables_to_db.git
 ```
 cd tables_to_db
 ```
+<br>
 
-Após feito o clone do repositório Kanvas, instalar:
+<h3>2. Após feito o clone do repositório, instalar:</h3>
 
-O ambiente virtual e atualizar suas dependências com o seguinte comando:
+<h4>O ambiente virtual e atualizar suas dependências com o seguinte comando:</h4>
 
+LINUX:
 ```
-python -m venv venv --upgrade-deps
+python3 -m venv venv --upgrade-deps
 ```
 
-Ative o seu ambiente virtual com o comando:
+WINDOWS:
+```
+py -m venv env --upgrade-deps
+```
 
+<h4>Ative o seu ambiente virtual com o comando:</h4>
+
+LINUX:
 ```
 source/venv/bin/activate
 ```
 
-Instalar suas dependências:
+WINDOWS:
+
+No sistema operacional Windows é necessário antes configurar o Execution Policy do PowerShell:
+
+```
+Get-ExecutionPolicy # para verificar o tipo de política de execução
+Set-ExecutionPolicy RemoteSigned # para alterar o tipo de política se o comando acima mostrar 'Restricted'
+```
+Obs: Eventualmente, pode ser necessário abrir o PowerShell como administrador.
+
+```
+.\env\Scripts\activate
+```
+
+
+<h4>Instalar suas dependências:</h4>
 
 ```
 pip install -r requirements.txt
 ```
 
-E rodar a aplicação:
+WINDOWS:
+
+Caso seja retornado algum erro semelhante a este:
+
+```
+ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: 'C:\\Users\\andre.kuratomi\\OneDrive - Empresa\\Área de Trabalho\\tables_to_db\\tables_to_db\\env\\Lib\\site-packages\\jedi\\third_party\\django-stubs\\django-stubs\\contrib\\contenttypes\\management\\commands\\remove_stale_contenttypes.pyi'
+HINT: This error might have occurred since this system does not have Windows Long Path support enabled. You can find information on how to enable this at https://pip.pypa.io/warnings/enable-long-paths
+```
+
+Rode no cmd como adminstrador o seguinte comando:
+
+```
+reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
+```
+<br>
+
+<h3>3. E rodar a aplicação:</h3>
 
 ```
 code .
 ```
+<br>
