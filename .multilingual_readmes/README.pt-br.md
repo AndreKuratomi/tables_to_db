@@ -17,7 +17,7 @@
 
 ## Sobre
 
-<b>tables_to_db</b> é um módulo que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
+<b>tables_to_db</b> é um módulo <strong>python</strong> que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
 
 Este módulo pode ser acoplado a qualquer projeto maior que necessite desta funcionalidade.
 
