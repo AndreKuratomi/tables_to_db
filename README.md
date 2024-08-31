@@ -48,7 +48,7 @@ Configure o git para desabilitar a certificação SSL:
 ```
 git config --global http.sslVerify "false"
 ```
-
+<br>
 <p>Entrar na pasta criada:</p>
 
 ```
@@ -87,6 +87,7 @@ Set-ExecutionPolicy RemoteSigned # para alterar o tipo de política se o comando
 ```
 Obs: Eventualmente, pode ser necessário abrir o PowerShell como administrador.
 
+E enfim ativar o ambiente virtual com o comando abaixo:
 ```
 .\env\Scripts\activate
 ```
@@ -114,13 +115,44 @@ reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
 ```
 <br>
 
-<h3>3. E rodar a aplicação:</h3>
+<h3>4. Create <b>.env</b> file:</h3>
+
+./
+```
+touch .env
+```
+
+Dentro dele precisamos definir nossas variáveis de ambiente tendo como referência o arquivo <b>.env.example</b>:
+
+```
+MYSQL_USER=user
+MYSQL_PASSWORD=password
+```
+
+Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O arquivo já consta no .gitignore para não ser subido no repositório.
+
+<br>
+
+
+<h3>3. Abrir o script no seu IDE:</h3>
 
 ```
 code .
 ```
+
+<h3>4. E rodar o script:</h3>
+
+LINUX:
+```
+python3 tables_to_db.py
+```
+
+WINDOWS:
+```
+py tables_to_db.py
+```
 <br>
-<br>
+
 
 ## Referências
 
