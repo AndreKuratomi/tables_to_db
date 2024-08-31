@@ -170,7 +170,7 @@ code .
 
 O módulo <b>tables_to_db.insert_tables_to_a_db()</b> tem dois parâmetros: 'db' e 'tables_path'.
 
-Ele foi originalmente desenvolvido para um projeto que utilizava <b>MySQL</b> (db) e tabelas <b>CSV</b> localizadas numa determinada pasta (tables_path). Este módulo veio em substituição da inserção manual dessas tabelas no MySQL usando <b>MySQL Workbench</b>, economizando tempo.
+Ele foi originalmente desenvolvido para um projeto que utilizava <b>MySQL</b> (db) e tabelas <b>CSV</b> localizadas numa determinada pasta (tables_path). Este módulo veio em substituição à inserção manual dessas tabelas no MySQL usando <b>MySQL Workbench</b>, economizando tempo.
 
 Então num projeto este módulo pode ser simplesmente instanciado assim:
 
