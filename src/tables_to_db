@@ -12,8 +12,10 @@ from sqlalchemy import create_engine
 from tqdm import tqdm
 
 
-# Takes a database, takes tables and inserts them into database at once:
 def insert_tables_to_a_db(db: str, tables_path: str) -> pymysql.connections.Connection:
+
+    """Takes a database, takes tables from a directory's path provived and inserts them into the database at once"""
+
     # CONNECT TO PYMYSQL:
     connection = pymysql.connect(host='localhost',
                                  user=os.getenv('MYSQL_USER', "root"),
@@ -36,7 +38,7 @@ def insert_tables_to_a_db(db: str, tables_path: str) -> pymysql.connections.Conn
                          os.path.isfile(os.path.join(tables_path, file)) and file.endswith('.csv')]
 
     # insert tables' content into database:
-    for table in tqdm(table_directory_content, "Inserindo planilhas no banco de dados: "):
+    for table in tqdm(table_directory_content, "Inserting tables in the database: "):
         engine = create_engine(f"mysql+pymysql://{os.getenv('MYSQL_USER', 'root')}:"
                                f"{os.getenv('MYSQL_PASSWORD', 'root')}@localhost/{db}") #'converting' to sqlalchemy shape
 

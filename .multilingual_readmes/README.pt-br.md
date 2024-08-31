@@ -3,6 +3,7 @@
 - [Traduções](#traduções)
 - [Sobre](#sobre)
 - [Instalação](#instalação)
+- [Como utilizar este módulo](#como-utilizar-este-módulo)
 - [Referências](#referências)
 
 <br>
@@ -16,21 +17,21 @@
 
 ## Sobre
 
-<b>tables_to_db</b> é um script que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
+<b>tables_to_db</b> é um módulo que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
 
-Este script pode ser acoplado a qualquer projeto maior que necessite desta funcionalidade.
+Este módulo pode ser acoplado a qualquer projeto maior que necessite desta funcionalidade.
 
 <br>
 
 ## Instalação
 
-<h4>0. Para a utilização deste script, primeiramente é necessário já ter instalado na própria máquina:</h4>
+<h4>0. Para a utilização deste módulo, primeiramente é necessário já ter instalado na própria máquina:</h4>
 
 - O versionador de código <b>[Git](https://git-scm.com/downloads)</b>.
 
 - A linguagem de programação <b>[Python](https://www.python.org/downloads/)</b>.
 
-- <p> E versionar o diretório escolhido para receber o clone deste script:</p>
+- <p> E versionar o diretório escolhido para receber o clone deste módulo:</p>
 
 ```
 git init
@@ -158,23 +159,28 @@ Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O 
 <br>
 
 
-<h4>3. Abrir o script no seu IDE:</h4>
+<h4>3. Abrir o módulo no seu IDE:</h4>
 
 ```
 code .
 ```
 
-<h4>4. E rodar o script:</h4>
 
-LINUX:
+## Como utilizar este módulo
+
+O módulo <b>tables_to_db.insert_tables_to_a_db()</b> tem dois parâmetros: 'db' e 'tables_path'.
+
+Ele foi originalmente desenvolvido para um projeto que utilizava <b>MySQL</b> (db) e tabelas <b>CSV</b> localizadas numa determinada pasta (tables_path). Este módulo veio em substituição da inserção manual dessas tabelas no MySQL usando <b>MySQL Workbench</b>, economizando tempo.
+
+Então num projeto este módulo pode ser simplesmente instanciado assim:
+
 ```
-python3 tables_to_db.py
+db = 'my_mysql_database'
+tables_path = '/path/to/csv/tables'
+
+insert_tables_to_a_db(db, tables_path)
 ```
 
-WINDOWS:
-```
-py tables_to_db.py
-```
 <br>
 
 

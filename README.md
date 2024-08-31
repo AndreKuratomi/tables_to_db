@@ -3,6 +3,7 @@
 - [Translations](#translations)
 - [About](#about)
 - [Instalation](#instalation)
+- [How to use this module](#How-does-the-module-work)
 - [References](#references)
 
 <br>
@@ -16,15 +17,15 @@
 
 ## About
 
-<b>tables_to_db</b> is a <strong>python</strong> script that automatises <strong>csv</strong> tables insertion in a <strong>MySQL</strong> database using <strong>PyMySQL</strong> an <strong>Pandas</strong>. With this a manual insertion via some interface such as MySQL Workbench, for instance, is dispensable.
+<b>tables_to_db</b> is a <strong>python</strong> module that automatises <strong>csv</strong> tables insertion in a <strong>MySQL</strong> database using <strong>PyMySQL</strong> an <strong>Pandas</strong>. With this a manual insertion via some interface such as MySQL Workbench, for instance, is dispensable.
 
-This script can be easily joined to any major project that may need its functionality.
+This module can be easily used in any major project that may need its functionality.
 
 <br>
 
 ## Instalation
 
-<h4>0. Before using this script it is first necessary to have instaled the following devices:</h4>
+<h4>0. Before using this module it is first necessary to have instaled the following devices:</h4>
 
 - The code versioning <b>[Git](https://git-scm.com/downloads)</b>.
 
@@ -116,7 +117,7 @@ Obs: It may often be necessary to open PowerShell as administrador for that.
 .\env\Scripts\activate
 ```
 <br>
-<h5>Install the script's dependencies:</h5>
+<h5>Install the module's dependencies:</h5>
 
 ```
 pip install -r requirements.txt
@@ -148,7 +149,7 @@ code .
 <br>
 
 
-<h4>4. Create <b>.env</b> file in the script's root directoy:</h4>
+<h4>4. Create <b>.env</b> file in the root directoy:</h4>
 
 ```
 touch .env
@@ -164,18 +165,21 @@ MYSQL_PASSWORD=password
 Obs: Do not share info from .env file. It is already mentioned in <b>.gitignore</b> for not being pushed to the repo.
 
 <br>
-<h5>4. And run the script:</h5>
 
-LINUX:
-```
-python3 tables_to_db.py
-```
+## How to use this module
 
-WINDOWS:
+The module <b>tables_to_db.insert_tables_to_a_db()</b> has two parameters: 'db' and 'tables_path'.
+
+It was originally developed for a project that used <b>MySQL</b> (db) and <b>CSV</b> tables located in a separated folder (tables_path). This module came in substitution of manual insertion of this tables to MySQL using <b>MySQL Workbench</b>, saving time.
+
+So this module can be simply instatiated in a project like this:
+
 ```
-py tables_to_db.py
+db = 'my_mysql_database'
+tables_path = '/path/to/csv/tables'
+
+insert_tables_to_a_db(db, tables_path)
 ```
-<br>
 
 
 ## References
