@@ -70,7 +70,22 @@ WINDOWS:
 py -m venv env --upgrade-deps
 ```
 
-<h4>Ative o seu ambiente virtual com o comando:</h4>
+Caso seja retornado algum erro semelhante a este basta seguir as instruções:
+
+```
+The virtual environment was not created successfully because ensurepip is not
+available.  On Debian/Ubuntu systems, you need to install the python3-venv
+package using the following command.
+
+    apt install python3.10-venv
+
+You may need to use sudo with that command.  After installing the python3-venv
+package, recreate your virtual environment.
+```
+
+<h4>Ative o seu ambiente virtual* com o comando:</h4>
+
+*É interessante seguir esta prática porque diferentes projetos exigem diferentes dependências. Um ambiente virtual nada mais é do que um ambiente separado da sua máquina. Caso contrário, a máquina do usuário pode se encher de dependências que serão utilizadas apenas em um único projeto.
 
 LINUX:
 ```
@@ -88,10 +103,10 @@ Set-ExecutionPolicy RemoteSigned # para alterar o tipo de política se o comando
 Obs: Eventualmente, pode ser necessário abrir o PowerShell como administrador.
 
 E enfim ativar o ambiente virtual com o comando abaixo:
+
 ```
 .\env\Scripts\activate
 ```
-
 
 <h4>Instalar suas dependências:</h4>
 
