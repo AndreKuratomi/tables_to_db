@@ -133,7 +133,7 @@ ERROR: Could not install packages due to an OSError: [Errno 2] No such file or d
 HINT: This error might have occurred since this system does not have Windows Long Path support enabled. You can find information on how to enable this at https://pip.pypa.io/warnings/enable-long-paths
 ```
 
-Rode no cmd como adminstrador o seguinte comando:
+Rode no <b>cmd</b> como adminstrador o seguinte comando:
 
 ```
 reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
@@ -142,7 +142,6 @@ reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
 
 <h4>4. Criar o arquivo <b>.env</b> no diretório raiz:</h4>
 
-./
 ```
 touch .env
 ```
@@ -165,6 +164,7 @@ Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O 
 code .
 ```
 
+<br>
 
 ## Como utilizar este módulo
 
