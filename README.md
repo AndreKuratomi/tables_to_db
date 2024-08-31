@@ -115,7 +115,7 @@ reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled
 ```
 <br>
 
-<h3>4. Create <b>.env</b> file:</h3>
+<h3>4. Criar o arquivo <b>.env</b> no diretório raiz:</h3>
 
 ./
 ```
@@ -129,7 +129,7 @@ MYSQL_USER=user
 MYSQL_PASSWORD=password
 ```
 
-Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O arquivo já consta no .gitignore para não ser subido no repositório.
+Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O arquivo já consta no .gitignore para não constar no repositório github.
 
 <br>
 
