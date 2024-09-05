@@ -29,6 +29,8 @@ This module can be easily used in any major project that may need its functional
 
 - The code versioning <b>[Git](https://git-scm.com/downloads)</b>.
 
+- The language <b>[Python](https://www.python.org/downloads/)</b>
+
 - A <b>code editor</b>, also known as <b>IDE</b>. For instance, <strong>[Visual Studio Code (VSCode)](https://code.visualstudio.com/)</strong>.
 
 - <p> And versioning your directory to receive the aplication clone:</p>
