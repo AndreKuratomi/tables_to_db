@@ -1,46 +1,44 @@
 # tables_to_db
 
-- [Translations](#translations)
-- [About](#about)
-- [Instalation](#instalation)
-- [How to use this module](#How-does-the-module-work)
-- [References](#references)
+- [Traduções](#traduções)
+- [Sobre](#sobre)
+- [Instalação](#instalação)
+- [Como utilizar este módulo](#como-utilizar-este-módulo)
+- [Referências](#referências)
 
 <br>
 
-## Translations
+## Traduções
 
-- [Português brasileiro / Brazilian portuguese](/.multilingual_readmes/README.pt-br.md)
-- [English](https://github.com/AndreKuratomi/tables_to_db)
-
-<br>
-
-## About
-
-<b>tables_to_db</b> is a <strong>python</strong> module that automatises <strong>csv</strong> tables insertion in a <strong>MySQL</strong> database using <strong>PyMySQL</strong> an <strong>Pandas</strong>. With this a manual insertion via some interface such as MySQL Workbench, for instance, is dispensable.
-
-This module can be easily used in any major project that may need its functionality.
+- [Inglês / English](./.multilingual_readmes/README_en-uk.md)
+- [Português brasileiro / Brazilian portuguese](https://github.com/AndreKuratomi/tables_to_db/tree/pt_br)
 
 <br>
 
-## Instalation
+## Sobre
 
-<h4>0. Before using this module it is first necessary to have instaled the following devices:</h4>
+<b>tables_to_db</b> é um módulo <strong>python</strong> que automatiza a inserção de tabelas <strong>csv</strong> em um banco de dados <strong>MySQL</strong> usando <strong>PyMySQL</strong> e <strong>Pandas</strong>, dispensando, assim, inserção manual via interface MySQL Workbench, por exemplo.
 
-- The code versioning <b>[Git](https://git-scm.com/downloads)</b>.
+Este módulo pode ser acoplado a qualquer projeto maior que necessite desta funcionalidade.
 
-- The language <b>[Python](https://www.python.org/downloads/)</b>
+<br>
 
-- A <b>code editor</b>, also known as <b>IDE</b>. For instance, <strong>[Visual Studio Code (VSCode)](https://code.visualstudio.com/)</strong>.
+## Instalação
 
-- <p> And versioning your directory to receive the aplication clone:</p>
+<h4>0. Para a utilização deste módulo, primeiramente é necessário já ter instalado na própria máquina:</h4>
+
+- O versionador de código <b>[Git](https://git-scm.com/downloads)</b>.
+
+- A linguagem de programação <b>[Python](https://www.python.org/downloads/)</b>.
+
+- <p> E versionar o diretório escolhido para receber o clone deste módulo:</p>
 
 ```
 git init
 ```
 
 <br>
-<h4>1. Clone the repository <b>tables_to_db</b> by your machine terminal or by the IDE:</h4>
+<h4>1. Fazer o clone do reposítório <b>tables_to_db</b> na sua máquina pelo terminal do computador ou pelo do IDE:</h4>
 
 ```
 git clone https://github.com/AndreKuratomi/tables_to_db.git
@@ -48,29 +46,28 @@ git clone https://github.com/AndreKuratomi/tables_to_db.git
 
 WINDOWS:
 
-Obs: In case of any mistake similar to this one: 
+Obs: Caso apareca algum erro semelhante a este: 
 
 ```
-unable to access 'https://github.com/AndreKuratomi/tables_to_db.git/': SSL certificate problem: self-signed certificate in certificate chain
+unable to access 'https://github.com/AndreKuratomi/tables_to_db.git': SSL certificate problem: self-signed certificate in certificate chain
 ```
 
-Configure git to disable SSL certification:
+Configure o git para desabilitar a certificação SSL:
 
 ```
 git config --global http.sslVerify "false"
 ```
-
-<p>Enter the directory:</p>
+<br>
+<p>Entrar na pasta criada:</p>
 
 ```
 cd tables_to_db
 ```
 <br>
 
-<h4>2. After cloning the repository install:</h4>
+<h4>2. Após feito o clone do repositório, instalar:</h4>
 
-<h5>Virtual enviroment* and update its dependencies with the following command:</h5>
-
+<h5>O ambiente virtual* e atualizar suas dependências com o seguinte comando:</h5>
 
 LINUX:
 ```
@@ -82,7 +79,7 @@ WINDOWS:
 py -m venv venv --upgrade-deps
 ```
 
-In case an error like this one is returned just follow the command displayed:
+Caso seja retornado algum erro semelhante a este basta seguir as instruções:
 
 ```
 The virtual environment was not created successfully because ensurepip is not
@@ -95,10 +92,9 @@ You may need to use sudo with that command.  After installing the python3-venv
 package, recreate your virtual environment.
 ```
 
-*It is a good practice to work with virtual enviroments because different projects may need different dependencies. A virtual enviroment is only a separated enviroment from the user machine. If not used, the user's machine may have lots of dependencies intalled that may only be used in a single project.
+*É interessante seguir esta prática porque diferentes projetos exigem diferentes dependências. Um ambiente virtual nada mais é do que um ambiente separado da sua máquina. Caso contrário, a máquina do usuário pode se encher de dependências que serão utilizadas apenas em um único projeto.
 
-<br>
-<h5>Activate your virtual enviroment with the command:</h5>
+<h5>Ative o seu ambiente virtual com o comando:</h5>
 
 LINUX:
 ```
@@ -107,74 +103,76 @@ source/venv/bin/activate
 
 WINDOWS:
 
-On Windows operational system it is necessary to configure the Execution Policy at PowerShell:
+No sistema operacional Windows é necessário antes configurar o Execution Policy do PowerShell:
 
 ```
-Get-ExecutionPolicy # to check the Execution policy type
-Set-ExecutionPolicy RemoteSigned # to change the type of policy if the command above shows 'Restricted'
+Get-ExecutionPolicy # para verificar o tipo de política de execução
+Set-ExecutionPolicy RemoteSigned # para alterar o tipo de política se o comando acima mostrar 'Restricted'
 ```
-Obs: It may often be necessary to open PowerShell as administrador for that.
+Obs: Eventualmente, pode ser necessário abrir o PowerShell como administrador.
+
+E enfim ativar o ambiente virtual com o comando abaixo:
 
 ```
 .\env\Scripts\activate
 ```
-<br>
-<h5>Install the module's dependencies:</h5>
+
+
+<h5>Instalar suas dependências:</h5>
 
 ```
 pip install -r requirements.txt
 ```
-<br>
-
 
 WINDOWS:
 
-In case any error similar to the one bellow be returned:
+Caso seja retornado algum erro semelhante a este:
 
 ```
-ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: 'C:\\Users\\andre.kuratomi\\OneDrive - Company\\Área de Trabalho\\tables_to_db_mail_for_finances\\tables_to_db_and_mail_finances\\env\\Lib\\site-packages\\jedi\\third_party\\django-stubs\\django-stubs\\contrib\\contenttypes\\management\\commands\\remove_stale_contenttypes.pyi'
+ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: 'C:\\Users\\andre.kuratomi\\OneDrive - Empresa\\Área de Trabalho\\tables_to_db\\tables_to_db\\env\\Lib\\site-packages\\jedi\\third_party\\django-stubs\\django-stubs\\contrib\\contenttypes\\management\\commands\\remove_stale_contenttypes.pyi'
 HINT: This error might have occurred since this system does not have Windows Long Path support enabled. You can find information on how to enable this at https://pip.pypa.io/warnings/enable-long-paths
 ```
 
-Run cmd as adminstrador with the following command:
+Rode no <b>cmd</b> como adminstrador o seguinte comando:
 
 ```
 reg.exe add HKLM\SYSTEM\CurrentControlSet\Control\FileSystem /v LongPathsEnabled /t REG_DWORD /d 1 /f
 ```
 <br>
 
-<h4>3. Open the application on your IDE:</h4>
-
-```
-code .
-```
-<br>
-
-
-<h4>4. Create <b>.env</b> file in the root directoy:</h4>
+<h4>4. Criar o arquivo <b>.env</b> no diretório raiz:</h4>
 
 ```
 touch .env
 ```
 
-Inside it we need to put our enviroment variables taking as reference the given file <b>.env.example</b>:
+Dentro dele precisamos definir nossas variáveis de ambiente tendo como referência o arquivo <b>.env.example</b>:
 
 ```
 MYSQL_USER=user
 MYSQL_PASSWORD=password
 ```
 
-Obs: Do not share info from .env file. It is already mentioned in <b>.gitignore</b> for not being pushed to the repo.
+Obs: As informações contidas no arquivo .env não devem ser compartilhadas. O arquivo já consta no <b>.gitignore</b> para não constar no repositório github.
 
 <br>
 
-## How to use this module
 
-The module <b>tables_to_db.insert_tables_to_a_db()</b> has two parameters: 'db' and 'tables_path'.
+<h4>3. Abrir o módulo no seu IDE:</h4>
 
-It was originally developed for a project that used <b>MySQL</b> (db) and <b>CSV</b> tables located in a separated folder (tables_path). This module came in substitution of manual insertion of this tables to MySQL using <b>MySQL Workbench</b>, saving time.
+```
+code .
+```
 
-So this module can be simply instatiated in a project like this:
+<br>
+
+## Como utilizar este módulo
+
+O módulo <b>tables_to_db.insert_tables_to_a_db()</b> tem dois parâmetros: 'db' e 'tables_path'.
+
+Ele foi originalmente desenvolvido para um projeto que utilizava <b>MySQL</b> (db) e tabelas <b>CSV</b> localizadas numa determinada pasta (tables_path). Este módulo veio em substituição à inserção manual dessas tabelas no MySQL usando <b>MySQL Workbench</b>, economizando tempo.
+
+Então num projeto este módulo pode ser simplesmente instanciado assim:
 
 ```
 db = 'my_mysql_database'
@@ -183,8 +181,10 @@ tables_path = '/path/to/csv/tables'
 insert_tables_to_a_db(db, tables_path)
 ```
 
+<br>
 
-## References
+
+## Referências
 
 - [Git](https://git-scm.com/downloads)
 - [MySQL](https://https://www.mysql.com/)
