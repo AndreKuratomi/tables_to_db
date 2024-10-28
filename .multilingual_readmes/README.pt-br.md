@@ -10,8 +10,8 @@
 
 ## Traduções
 
-- [Português brasileiro / Brazilian portuguese](/.multilingual_readmes/README.pt-br.md)
-- [Inglês / English](https://github.com/AndreKuratomi/tables_to_db)
+- [🇧🇷 Português brasileiro / Brazilian portuguese](/.multilingual_readmes/README.pt-br.md)
+- [🇬🇧 / 🇺🇸 Inglês / English](https://github.com/AndreKuratomi/tables_to_db)
 
 <br>
 
